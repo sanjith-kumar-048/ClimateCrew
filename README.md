@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Available Scripts
 
-#Run this command after cloning
+# Run this command after cloning
 
 ### `npm install`
 
