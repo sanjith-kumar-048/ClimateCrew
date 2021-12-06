@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layouts/Layout";
+import HomePage from "./pages/HomePage";
+import ClimateChange from "./pages/ClimateChange";
+import CarbonFootprint from "./pages/CarbonFootprint";
+import Products from "./pages/Products";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        {/* <HomePage />
+        </Route> */}
+        <Route path="/climate_change" element={<ClimateChange />} />
+        {/* <ClimateChange />
+        </Route> */}
+        <Route path="/carbon_footprint" element={<CarbonFootprint />} />
+        {/* <CarbonFootprint />
+        </Route> */}
+        <Route path="/products" element={<Products />} />
+        {/* <Products />
+        </Route> */}
+        <Route path="/faq" element={<FAQ />} />
+        {/* <FAQ />
+        </Route> */}
+      </Routes>
+    </Layout>
   );
 }
 
